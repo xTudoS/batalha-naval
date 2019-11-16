@@ -33,7 +33,7 @@ class Game(tk.Frame):
         wid = event.widget
         wid['bg'] = 'green' if wid.navio else 'black'
         if self.win():
-            messagebox.showinfo("Title", "Parabéns Soldado! Você afundou todos os self.navios estrangeiros!")
+            messagebox.showinfo("Title", f"Parabéns, Marinheiro! Você afundou todos os {len(self.navios)} navios estrangeiros!")
 
             self.controller.changeScreen(Game(self.controller))
             self.destroy()
